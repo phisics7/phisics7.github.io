@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jQuery.js"></script>
+    <script src="2.0.0.clipboard.min.js"></script>
+    <style>
+        input {
+            width: 100%;
+        }
+    </style>
+    <script>
+        var pol;
+        $(document).ready(function(){
+        var clipboard = new ClipboardJS('.btn');
+clipboard.on('success', function(e) {
+e.clearSelection();
+});
+clipboard.on('error', function(e) {});
+            pol = Math.floor(Math.random()*10);
+            if(pol < 5){
+                var name = ["Andrey", "Anton", "Tima", "Petr", "Igor", "Egor", "Pavel", "Kirill", "Anatolii", "Roma"];
+            } else {
+                var name = ["Olga", "Irina", "Alexsandra", "Sofi", "Margaret", "Katya", "Nastya", "Dariya", "Lera", "Leila"];
+            }
+            var n = Math.floor(Math.random()*10);
+            name = name[n];
+            $("#foo").val(name);
+            var pr = 0;
+            $(".btn").click(function(){
+                setTimeout(function(){
+                if(pr == 0){
+                    do{
+                    var posch = Math.floor(Math.random()*10);
+                    } while(posch > 4);
+                    var dom = ["gmail.com", "yandex.ru", "outlook.com", "mail.ru", "ya.ru"];
+                    var ch = Math.floor(Math.random()*100000);
+                    name = name.toLowerCase();
+                    if(posch < 2){
+                        var email = ch + name + "@" + dom[posch];
+                    } else {
+                        var email = name + ch + "@" + dom[posch];
+                    }
+                    $("#foo").val(email);
+                    pr++;
+                } else if (pr == 1){
+                    do{
+                    var k1 = Math.floor(Math.random()*10);
+                    } while(k1 > 4);
+                    var kom1 = ["Всем привет!", "Добрый день.", "Доброе утро!", "Здраввствуйте.", "Приветики!"];
+                    do{
+                    var k2 = Math.floor(Math.random()*10);
+                    } while(k2 > 2);
+                    var kom2 = ["Меня зовут ", "Я ", "Моё имя "];
+                    var reg = Math.floor(Math.random()*10);
+                    if(reg < 3){
+                        name = name.toUpperCase();
+                    }
+                    do{
+                    var k3 = Math.floor(Math.random()*10);
+                    } while(k3 > 5);
+                    var kom3 = ["Я", "Мой друг", "Знакомый", "Одноклассник", "Друг моего друга ", "Мой сын"];
+                    do{
+                    var k4 = Math.floor(Math.random()*10);
+                    } while(k4 > 3);
+                    var kom4 = ["очень понравилось", "понравилось", "показалось замечательным", "приглянулась"];
+                    do{
+                    var k5 = Math.floor(Math.random()*10);
+                    } while(k5 > 4);
+                    var kom5 = ["Ставлю лайк! ", "Ставлю пять балов. ", "Советаю сюда сходить. ", "Можете посетить! ", "Сына отправлю сюда. "];
+                    do{
+                    var k6 = Math.floor(Math.random()*10);
+                    } while(k6 > 3);
+                    var kom6 = ["До свидания.", "Всем пока!.", "Хорошего дня", "Покусики!"];
+                    var kom = kom1[k1] + " " + kom2[k2] + name + ". " + kom3[k3] + " посещал данную организацию и ему она " + kom4[k4] + ". " + kom5[k5] + kom6[k6];
+                    $("#foo").val(kom);
+                    pr++;
+                } else {
+                    var reg = Math.floor(Math.random()*10);
+                    if(reg < 5){
+                        document.location.href = "https://otzyvy.pro/reviews/otzyvy-ksk-winner-441927.html#a_add_comment";
+                    } else {
+                        document.location.href = "https://otzyvy.pro/reviews/otzyvy-futbolnaya-arena-komfort-434649.html#a_add_comment";
+                    }
+                }
+                }, 1000);
+            });
+    });
+    </script>
+  </head>
+  <body>
+    <input id="foo"/>
+<button class="btn" data-clipboard-target="#foo">Copy</button>
+  </body>
+</html>
