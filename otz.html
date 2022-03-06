@@ -27,6 +27,17 @@ clipboard.on('error', function(e) {});
             var n = Math.floor(Math.random()*10);
             name = name[n];
           do{
+                    var posch = Math.floor(Math.random()*10);
+                    } while(posch > 4);
+                    var dom = ["gmail.com", "yandex.ru", "outlook.com", "mail.ru", "ya.ru"];
+                    var ch = Math.floor(Math.random()*100000);
+                    name = name.toLowerCase();
+                    if(posch < 2){
+                        var email = ch + name + "@" + dom[posch];
+                    } else {
+                        var email = name + ch + "@" + dom[posch];
+                    }
+          do{
                     var k1 = Math.floor(Math.random()*10);
                     } while(k1 > 4);
                     var kom1 = ["Всем привет!", "Добрый день.", "Доброе утро!", "Здравствуйте.", "Приветики!"];
@@ -60,17 +71,6 @@ clipboard.on('error', function(e) {});
             $(".btn").click(function(){
                 setTimeout(function(){
                 if(pr == 0){
-                    do{
-                    var posch = Math.floor(Math.random()*10);
-                    } while(posch > 4);
-                    var dom = ["gmail.com", "yandex.ru", "outlook.com", "mail.ru", "ya.ru"];
-                    var ch = Math.floor(Math.random()*100000);
-                    name = name.toLowerCase();
-                    if(posch < 2){
-                        var email = ch + name + "@" + dom[posch];
-                    } else {
-                        var email = name + ch + "@" + dom[posch];
-                    }
                     $("#foo").val(email);
                     pr++;
                 } else if (pr == 1){
