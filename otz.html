@@ -26,6 +26,7 @@ clipboard.on('error', function(e) {});
             }
             var n = Math.floor(Math.random()*10);
             name = name[n];
+          myname = name;
           do{
                     var posch = Math.floor(Math.random()*10);
                     } while(posch > 4);
@@ -74,15 +75,7 @@ clipboard.on('error', function(e) {});
                     $("#foo").val(email);
                     pr++;
                 } else if (pr == 1){
-                    pol = Math.floor(Math.random()*10);
-            if(pol < 5){
-                var name = ["Andrey", "Anton", "Tima", "Petr", "Igor", "Egor", "Pavel", "Kirill", "Anatolii", "Roma"];
-            } else {
-                var name = ["Olga", "Irina", "Alexsandra", "Sofi", "Margaret", "Katya", "Nastya", "Dariya", "Lera", "Leila"];
-            }
-            var n = Math.floor(Math.random()*10);
-            name = name[n];
-            $("#foo").val(name);
+            $("#foo").val(myname);
                     pr++;
                 } else {
                     var reg = Math.floor(Math.random()*10);
