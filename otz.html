@@ -18,6 +18,14 @@ clipboard.on('success', function(e) {
 e.clearSelection();
 });
 clipboard.on('error', function(e) {});
+          pol = Math.floor(Math.random()*10);
+            if(pol < 5){
+                var name = ["Andrey", "Anton", "Tima", "Petr", "Igor", "Egor", "Pavel", "Kirill", "Anatolii", "Roma"];
+            } else {
+                var name = ["Olga", "Irina", "Alexsandra", "Sofi", "Margaret", "Katya", "Nastya", "Dariya", "Lera", "Leila"];
+            }
+            var n = Math.floor(Math.random()*10);
+            name = name[n];
           do{
                     var k1 = Math.floor(Math.random()*10);
                     } while(k1 > 4);
