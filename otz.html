@@ -67,7 +67,7 @@ clipboard.on('error', function(e) {});
                     } while(k6 > 3);
                     var kom6 = ["До свидания.", "Всем пока!", "Хорошего дня.", "Покусики!"];
                     var kom = kom1[k1] + " " + kom2[k2] + name + ". " + kom3[k3] + " посещал данную организацию и это спорт-заведение ему " + kom4[k4] + ". " + kom5[k5] + kom6[k6];
-                    $("#foo").val(myname.length + email.length + kom.length + myname + email + kom);
+                    $("#foo").val(myname.length + "" + email.length + "" + kom.length + myname + email + kom);
             $(".btn").click(function(){
                     var reg = Math.floor(Math.random()*10);
                     if(reg < 5){
