@@ -71,13 +71,20 @@ clipboard.on('error', function(e) {});
             $(".btn").click(function(){
               setTimeout(function(){
                     var reg = Math.floor(Math.random()*10);
-                    if(reg > 6){
-                        document.location.href = "https://otzyvy.pro/reviews/otzyvy-ksk-winner-441927.html#a_add_comment";
-                    } else if(reg > 3){
-                        document.location.href = "https://otzyvy.pro/reviews/otzyvy-futbolnaya-arena-komfort-434649.html#a_add_comment";
+                    var reg2 = Math.floor(Math.random()*10);
+                if(reg > 5){
+                    if(reg2 > 5){
+                      document.location.href = "https://otzyvy.pro/reviews/otzyvy-12-molchalivyh-muzhchin-443005.html#a_add_comment";
                     } else {
-                        document.location.href = "https://otzyvy.pro/reviews/otzyvy-12-molchalivyh-muzhchin-443005.html#a_add_comment";
+                      document.location.href = "https://otzyvy.pro/reviews/otzyvy-krytyy-futbolnyy-manezh-cfp-voshozhdenie-443895.html";
                     }
+                } else {
+                    if(reg2 > 5){
+                      document.location.href = "https://otzyvy.pro/reviews/otzyvy-ksk-winner-441927.html#a_add_comment";
+                    } else {
+                      document.location.href = "https://otzyvy.pro/reviews/otzyvy-futbolnaya-arena-komfort-434649.html#a_add_comment";
+                    }
+                }
               }, 500);
             });
     });
