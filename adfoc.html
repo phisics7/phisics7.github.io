@@ -8,10 +8,10 @@
   if(r1 > 50){
     do{
       var t1 = Math.floor(Math.random()*100);
-    } while(t1 > 9 && t1 < 20);
+    } while(t1 < 10 && t1 > 20);
     do{
       var t2 = Math.floor(Math.random()*100);
-    } while(t2 > 9 && t2 < 20);
+    } while(t2 < 10 && t2 > 20);
     var r2 = Math.floor(Math.random()*100);
     if(r2 > 80){
       $("iframe:eq(0)").attr("src", "https://footbollmeneger.github.io/");
