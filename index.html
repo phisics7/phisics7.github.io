@@ -6,6 +6,21 @@
     <script type="text/javascript" src="jQuery.js"></script>
     <link rel="manifest" id="custom-manifest">
     <style>
+      #fon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 1000%;
+        background: rgba(0,0,0, .75);
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 40%;
+      }
         body {
             background: url("fon.jpg") no-repeat center center fixed;
         background-size: cover;
@@ -713,6 +728,7 @@ function handleEnd(evt) {
     </script>
   </head>
   <body>
+    <div id="fon">Для продоложения работы на сервисе нажмите <<Пропустить рекламу>> на следующем сайте</div>
     <div id="h01" style="display:none;"><img src="menu.jpg" id="opmen" class="hed" width="70px" style="border-radius:20px;"/></div>
     <div id="h02" class="hed">
         <span style="font-size:40px">Constructor Projects</span><br/>
