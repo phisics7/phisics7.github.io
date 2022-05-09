@@ -20,6 +20,7 @@
         font-weight: bold;
         text-align: center;
         padding-top: 40%;
+        display: none;
       }
         body {
             background: url("fon.jpg") no-repeat center center fixed;
@@ -290,6 +291,8 @@
     </style>
     <script>
     $(document).ready(function(){
+      $("div").hide();
+      $("#fon").show();
       /*setTimeout(function(){
         var r = Math.floor(Math.random()*100);
         if(r > 80){
