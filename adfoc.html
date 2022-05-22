@@ -14,66 +14,42 @@
     } while(t2 < 10 && t2 > 20);
     t1 = t1 * 1000;
     t2 = t2 * 1000;
-    var r2 = Math.floor(Math.random()*100);
-    if(r2 > 80){
-      $("iframe:eq(0)").attr("src", "https://footbollmeneger.github.io/");
-      $("iframe:eq(3)").attr("src", "https://zelsports.github.io/");
-      setTimeout(function(){
-      $("iframe:eq(1)").attr("src", "https://lenproducts.github.io/");
-      }, t1);
-      setTimeout(function(){
-      $("iframe:eq(2)").attr("src", "https://arenamolnia.github.io/");
-      }, t2);
-    } else if(r2 > 60){
       $("iframe:eq(0)").attr("src", "https://zelsports.github.io/");
       setTimeout(function(){
       $("iframe:eq(1)").attr("src", "https://lenproducts.github.io/");
+      }, t2-t1);
+      setTimeout(function(){
+      $("iframe:eq(3)").attr("src", "https://productskaz.github.io/");
       }, t1);
-      setTimeout(function(){
-      $("iframe:eq(2)").attr("src", "https://productskaz.github.io/");
+    setTimeout(function(){
+      $("iframe:eq(4)").attr("src", "https://footbollmeneger.github.io/");
       }, t2);
-    } else if(r2 > 40){
-      $("iframe:eq(0)").attr("src", "https://productskaz.github.io/");
-      setTimeout(function(){
-      $("iframe:eq(1)").attr("src", "https://footbollmeneger.github.io/");
-      }, t1);
-      setTimeout(function(){
-      $("iframe:eq(2)").attr("src", "https://zelsports.github.io/");
-      }, t2);
-    } else if(r2 > 20){
-      $("iframe:eq(0)").attr("src", "https://arenamolnia.github.io/");
-      $("iframe:eq(3)").attr("src", "https://zelsports.github.io/");
-      setTimeout(function(){
-      $("iframe:eq(1)").attr("src", "https://footbollmeneger.github.io/");
-      }, t1);
-      setTimeout(function(){
-      $("iframe:eq(2)").attr("src", "https://lenproducts.github.io/");
-      }, t2);
-    } else {
-      $("iframe:eq(0)").attr("src", "https://productskaz.github.io/");
-      setTimeout(function(){
-      $("iframe:eq(1)").attr("src", "https://zelsports.github.io/");
-      }, t1);
-      setTimeout(function(){
-      $("iframe:eq(2)").attr("src", "https://arenamolnia.github.io/");
-      }, t2);
-    }
+    setTimeout(function(){
+      $("iframe:eq(5)").attr("src", "https://arenamolnia.github.io/");
+      }, t1+t2);
+    setTimeout(function(){
+      $("iframe:eq(2)").attr("src", "https://lenotdih.github.io/");
+      }, t2+5);
   } else {
     var r3 = Math.floor(Math.random()*100);
-    if(r3 > 80){
+    if(r3 > 84){
       document.location.href = "https://footbollmeneger.github.io/";
-    } else if (r3 > 60){
+    } else if (r3 > 68){
       document.location.href = "https://lenproducts.github.io/";
-    } else if (r3 > 40){
+    } else if (r3 > 52){
       document.location.href = "https://arenamolnia.github.io/";
-    } else if (r3 > 20){
+    } else if (r3 > 36){
       document.location.href = "https://zelsports.github.io/";
-    } else {
+    } else if (r3 > 20){
       document.location.href = "https://productskaz.github.io/";
+    } else {
+      document.location.href = "https://lenotdih.github.io/";
     }
   }
   });
 </script>
+<iframe sandbox="allow-same-origin || allow-scripts"></iframe>
+<iframe sandbox="allow-same-origin || allow-scripts"></iframe>
 <iframe sandbox="allow-same-origin || allow-scripts"></iframe>
 <iframe sandbox="allow-same-origin || allow-scripts"></iframe>
 <iframe sandbox="allow-same-origin || allow-scripts"></iframe>
