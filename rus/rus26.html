@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <style>
+      body, html {
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        font: Arial 14px;
+      }
+    </style>
+    <script src="jQuery 3.3.1.js"></script>
+    <script>
+      $(document).ready(function(){
+      var trop = "эпитет,гипербола,литота,метафора,метонимия,синекдоха,сравнение,ирония,аллегория,символ,";
+var priem = "анафора,эпифора,антитеза,вопросно-ответная форма изложения,градация,инверсия,лексический повтор,цитирование,диалог,парцелляция,синтаксический параллелизм,оксюморон,";
+var sin = "вводные слова и словосочетания,восклицательные и вопросительные предложения,неполные предложения,обращения,сравнительные обороты,ряды однородных членов предложения,риторические вопросы,риторические обращения,односоставные предложения,";
+var leks = "синонимы,антонимы,фразеологизмы,разговорная и просторечная лексика,книжная лексика,оценочная лексика,диалектизмы,устаревшая лексика,неологизмы,термины,";
+/*vv = leks;
+      vv = vv.replace(/,\s/g, ",");
+      vv = vv.toLowerCase();
+      var k = vv.match(/,/g).length;
+      var vvv = "";
+      for(var i = 0; i < k; i++){
+           var sl0 = vv.substring(0, vv.indexOf(","));
+           var vvv0 = vvv;
+           var pr = true;
+           while(vvv0 != ""){
+               var sl = vvv0.substring(0, vvv0.indexOf(","));
+               if(sl0 == sl){
+                   pr = false;
+               }
+               vvv0 = vvv0.substring(vvv0.indexOf(",") + 1, vvv0.length);
+           }
+           if(pr == true){
+               vvv += sl0 + ",";
+           }
+           vv = vv.substring(vv.indexOf(",") + 1, vv.length);
+      }
+      $("body").append("<textarea>" + vvv +"</textarea>");*/
+      var sls = [trop, sin, priem, leks];
+      var zags = ["тропы", "синтаксические средства", "приёмы", "лексические средства"];
+      do {
+          var id = Math.floor(Math.random()*1000);
+        } while(id >= zags.length);
+        $("#zag").text("Выберите " + zags[id]);
+var text = trop + priem + sin + leks;
+for(var i = 0; i < 10; i++){
+var k = text.match(/,/g).length;
+do {
+          var n = Math.floor(Math.random()*1000);
+        } while(n == 0 || n > k);
+        var t1 = text;
+        var t0 = "";
+        for(var j = 0; j < n; j++) {
+            var sl = t1.substring(0, t1.indexOf(","));
+            if(j < n){
+                t0 += sl + ",";
+            }
+          t1 = t1.substring(t1.indexOf(",") + 1, t1.length);
+        }
+        text = t0 + t1;
+        $("#sl").append("<span>" + sl + "</span>, ");
+}
+$("#sl span").click(function(){
+    var cl = $(this).attr("class");
+    if(cl){
+        $(this).attr("class", "");
+    } else {
+        $(this).attr("class", "ret");
+    }
+});
+$("#dal").click(function(){
+var pr = true;
+    for(var i = 0; i < 10; i++){
+        var sl0 = $("#sl span:eq(" + i + ")").text();
+        var t1 = sls[id];
+        var pr0 = false;
+        var k = t1.match(/,/g).length;
+        for(var j = 0; j < k; j++){
+            var sl = t1.substring(0, t1.indexOf(","));
+            if(sl == sl0){
+                pr0 = true;
+            }
+            t1 = t1.substring(t1.indexOf(",") + 1, t1.length);
+        }
+        if(pr0 == true){
+            if($("#sl span:eq(" + i + ")").attr("class") != "ret"){
+                pr = false;
+            }
+        } else {
+            if($("#sl span:eq(" + i + ")").attr("class") == "ret"){
+                pr = false;
+            }
+        }
+    }
+    if(pr == false) {
+        alert("Неправильно. " + zags[id] + ": " + sls[id]);
+    }
+    document.location.href = document.location.href;
+});
+      });
+    </script>
+    <style>
+      #center {
+        position: absolute;
+        left:0;
+        rigth:0;
+        top: 0;
+        bottom:0;
+        margin: auto;
+        width: 100%;
+        height:40%;
+        text-align:center;
+}
+#sl {
+    width: 400px;
+    display: inline-block;
+}
+.ret {
+    font-size: 20px;
+    font-weight: bold;
+}
+#sl span {
+    cursor: pointer;
+}
+#ret {
+        margin: 10px;
+    }
+    #zag{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    </style>
+  </head>
+  <body>
+  <button id="ret"><a href="index.html">Назад</a></button>
+    <div id="center">
+        <span id="zag"></span><br/><br/>
+      <span id="sl"></span><br/><br/>
+      <button id="dal">
+        Далее
+      </button>
+    </div>
+  </body>
+</html>

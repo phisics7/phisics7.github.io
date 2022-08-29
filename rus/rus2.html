@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jQuery 3.3.1.js"></script>
+    <style>
+     #center {
+        position: absolute;
+        margin: auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        width: 50%;
+        height: 50%;
+        text-align: center;
+    }
+    #slog {
+        width: 300px;
+    }
+    #ret {
+        margin: 10px;
+    }
+    #zag{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    </style>
+    <script>
+    var t = "Сочинительные союзы(и,да,также,тоже,или,либо,то... то,а,но,однако,зато,но,не только...но и,не то чтобы... а,причём,);Подчинительные союзы(когда,пока,едва,лишь,чуть,потому что,так как,поскольку,благодаря тому что,дело в том что,вследствие того что,в связи с,если,раз,чтобы,поэтому,отсюда,так что,то есть, хотя,несмотря на то что,вопреки этому,как,словно,);Союзные слова(какой,который,чей,каков,сколько,где,куда,почему,как,когда,);Производные предлоги(благодаря,из,среди,вдоль,в силу,по причине,вследствие,вместо,вопреки,близ,вокруг,в течение,насчет,за счёт,в продолжение,посредством,);Отрицательные частицы(не,ни,вовсе не,нет,);Вопросительные частицы(неужели,разве,);Указательные частицы(вот,вон,это,);Уточняющие частицы(именно,как раз,прямо,);Выд.-ограничительные частицы(только,лишь,исключительно,почти,единственно,);Восклицательные частицы(что за,ну и,как,куда как,);Усилительные частицы(даже,же,ни,ведь,всё,);Частицы сомнения(едва ли,вряд ли,);Личные местоимения(я,ты,он,она,они,мы,вы,);Притяжательные местоимения(мой,твой,его,ее,их,);Указательные частицы(это,те,этот,тот,столько,таков,тот-то,такой-то,);Возвратное местоимение(себя,);Вопросительные местоимения(кто,что,какой,каков,чей,чем,сколько,);Относительные местоимения(кто,что,какой,каков,который,чей,сколько,);Определительные местоимения(сам,самый,целый,каждый,любой,всякий,весь,все,);Неопределённые местоимения(некто,нечто,некий,некоторый,кое-кто,какой-то,кто-либо,);Отрицательные местоимения(никто,ничто,ничей,никакой,ничего,);Вводные слова(конечно,вероятно,таким образом,итак,следовательно,например,так,наоборот,во-первых,с одной стороны,);Вводная конструкция(иными словами,другими словами,кроме того,);Указательные наречия(так,там,здесь,тут,туда,сюда,оттуда,отда,тогда,);Наречие причины(поэтому,потому,почему,оттого,);Наречия цели(зачем,затем,);";
+    var sl, name;
+        $(document).ready(function(){
+            $("#slog").focus();
+                    var kol = t.match(/;/g).length;
+                    do {
+                        var k = Math.floor(Math.random()*100);
+                    } while(k > kol || k == 0);
+                    var t0 = t;
+                    for(var i = 1; i <= k; i++){
+                        name = t0.substring(0, t0.indexOf("("));
+                        var sls = t0.substring(t0.indexOf("(") + 1, t0.indexOf(")"));
+                        t0 = t0.substring(t0.indexOf(";") + 1, t0.length);
+                    }
+                    var kol = sls.match(/,/g).length;
+                    do {
+                        var k = Math.floor(Math.random()*100);
+                    } while(k > kol || k == 0);
+                    var t0 = sls;
+                    for(var i = 1; i <= k; i++){
+                        sl = t0.substring(0, t0.indexOf(","));
+                        t0 = t0.substring(t0.indexOf(",") + 1, t0.length);
+                    }
+                    var reg = new RegExp(sl, "g");
+                    sls = sls.replace(reg, "...");
+                    $("#slov").text(sls);
+            $("#but").click(function(){
+                var inp = $("#slog").val();
+                inp = inp.replace(/\s/g, "");
+                inp = inp.toLowerCase();
+                var name0 = inp.substring(0, inp.indexOf(","));
+                var sl0 = inp.substring(inp.indexOf(",")+1, inp.length);
+                if(name == name0 && sl == sl0){
+                    
+                } else {
+                    alert("Неверно. " + name + ". " + sl);
+                }
+                document.location.href = document.location.href;
+                /*var kol = t.match(/;/g).length;
+                    do {
+                        var k = Math.floor(Math.random()*100);
+                    } while(k > kol || k == 0);
+                    var t0 = t;
+                    for(var i = 1; i <= k; i++){
+                        name = t0.substring(0, t0.indexOf("("));
+                        var sls = t0.substring(t0.indexOf("(") + 1, t0.indexOf(")"));
+                        t0 = t0.substring(t0.indexOf(";") + 1, t0.length);
+                    }
+                    var kol = sls.match(/,/g).length;
+                    do {
+                        var k = Math.floor(Math.random()*100);
+                    } while(k > kol || k == 0);
+                    var t0 = sls;
+                    for(var i = 1; i <= k; i++){
+                        sl = t0.substring(0, t0.indexOf(","));
+                        t0 = t0.substring(t0.indexOf(",") + 1, t0.length);
+                    }
+                    var reg = new RegExp(sl, "g");
+                    sls = sls.replace(reg, "...");
+                    $("#slov").text(sls);
+                    $("#slog").val("");*/
+            });
+        });
+    </script>
+  </head>
+  <body>
+  <button id="ret"><a href="index.html">Назад</a></button>
+    <div id="center"><span id="zag">Напишите недостоющие слово, затем напишите к какой части речи относятся все слова.<br/>Например: так как, подчинительные союзы</span><br/><br/><br/><span id="slov"></span><br/><br/><input id="slog" type="text"/><br/><br/><button id="but">Далее</button></div>
+  </body>
+</html>
