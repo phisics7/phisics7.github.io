@@ -7,7 +7,7 @@ if ('serviceWorker' in navigator) {
 
 function generateManifest(app_name) {
     const myDynamicManifest = {
-        "name": "Заданич для подготовки к ЕГЭ по русскому языку",
+        "name": "Задачи для подготовки к ЕГЭ по русскому языку",
         "short_name": "ЕГЭ(РУС)",
         "scope": window.location.href,
         "start_url": window.location.href,
@@ -36,7 +36,7 @@ function generateManifest(app_name) {
     const stringManifest = JSON.stringify(myDynamicManifest);
     const blob = new Blob([stringManifest], {type: 'application/json'});
     const manifestURL = URL.createObjectURL(blob);
-    document.querySelector('#custom-manifest').setAttribute('href', manifestURL);
+    //document.querySelector('#custom-manifest').setAttribute('href', manifestURL);
 }
 
 generateManifest();
