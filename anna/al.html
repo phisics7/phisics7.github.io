@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <style>
+      body, html {
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        font: Arial 14px;
+      }
+    </style>
+    <script>
+      var sleng = new Array();
+var slrus = new Array();
+      sleng = ["annoy", "block", "check", "cross", "dangerous", "driver", "enter", "kerb", "park", "pedestrian", "push", "safe", "on foot", "traffic lights", "zebra crossing"];
+      slrus = ["раздражать", "загораживать", "проверять", "пересекать", "опасный", "водитель", "входить", "обочина", "парковаться", "толкать", "безопасный", "пешком", "светофор", "зебра"];
+      do {
+        var ran = Math.floor(Math.random()*100);
+      } while(ran < 0 || ran > 4);
+      var sl = prompt("Напишите перевод\n" + sleng[ran]);
+if(sl == slrus[ran]){
+alert("верно");
+} else {
+alert("неверно");
+}
+      document.location.href = "al.html";
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
