@@ -28,7 +28,8 @@ alert("верно");
 } else {
 alert("неверно");
 }*/
-      speechSynthesis.speak(new SpeechSynthesisUtterance(slrus[ran]));
+      const utterance = new SpeechSynthesisUtterance('Добрый день!');
+window.speechSynthesis.speak(utterance);
       //document.location.href = "index.html";
     </script>
   </head>
