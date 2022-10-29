@@ -15,11 +15,11 @@
     <script>
       var sleng = new Array();
 var slrus = new Array();
-      sleng = ["annoy", "block", "check", "cross", "dangerous", "driver", "enter", "kerb", "park", "pedestrian", "push", "safe", "on foot", "traffic lights", "zebra crossing"];
-      slrus = ["раздражать", "загораживать", "проверять", "пересекать", "опасный", "водитель", "входить", "обочина", "парковаться", "толкать", "безопасный", "пешком", "светофор", "зебра"];
+      sleng = ["wind", "sun", "clouds", "raindow", "rain", "snow", "nurse", "helicopter", "ice cream", "hockey", "hippo", "city", "ruler", "towel", "wet", "hot", "sanny", "cold"];
+      slrus = ["ветер", "солнце", "облока", "радуга", "дождь", "снег", "медсестра", "вертолёт", "мороженное", "хоккей", "бегемот", "город", "линейка", "полотенце", "мокро", "жарко", "солнечно", "холодно"];
       do {
         var ran = Math.floor(Math.random()*100);
-      } while(ran < 0 || ran > 4);
+      } while(ran < 0 || ran >= sleng.length);
       var sl = prompt("Напишите перевод\n" + sleng[ran]);
 if(sl == slrus[ran]){
 alert("верно");
