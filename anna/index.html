@@ -22,7 +22,7 @@ var slrus = new Array();
       } while(ran < 0 || ran >= sleng.length);
       var sl = prompt("Напишите перевод\n" + sleng[ran]);
       sl = sl.toLowerCase();
-      /*sl = sl.match(/\s/g).join("");*/
+      sl = sl.match(/\s/g).join("");
 if(sl == slrus[ran]){
 alert("верно");
 } else {
